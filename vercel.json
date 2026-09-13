@@ -1,0 +1,1 @@
+{"functions":{"api/*.js":{"includeFiles":"private/**"}},"headers":[{"source":"/pobierz.html","headers":[{"key":"Cache-Control","value":"no-store"}]}]}
