@@ -97,6 +97,14 @@
     .contact-note a{text-underline-offset:4px;text-decoration:underline;text-decoration-color:#24593a66}
     .contact-note a:hover{text-decoration-color:currentColor}
     @media(min-width:641px) and (max-width:850px){html{--header-height:83px}.nav-contact{gap:12px}.nav-links{gap:18px}}
+
+    .digital-product{padding:72px 0;border-top:1px solid #20241f}
+    .product-shell{display:grid;grid-template-columns:minmax(260px,.8fr) minmax(320px,1.2fr);gap:54px;align-items:center;background:#111410;border:1px solid #262c27;border-radius:28px;padding:42px}
+    .product-cover{width:min(100%,390px);margin:auto;display:block;border-radius:10px;box-shadow:0 28px 80px #0008}
+    .product-copy h2{font-size:clamp(2rem,5vw,3.5rem);line-height:.98;margin:10px 0 18px}.product-copy>p{color:#aeb7b0;max-width:620px;line-height:1.65}
+    .product-meta{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.product-meta span{border:1px solid #303831;border-radius:999px;padding:8px 12px;color:#cbd2cc;font-size:.86rem}
+    .product-buy{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:28px}.product-price{font-size:1.55rem;font-weight:750}.product-note{font-size:.8rem;color:#7f8981;margin-top:12px}
+    @media(max-width:760px){.digital-product{padding:48px 0}.product-shell{grid-template-columns:1fr;padding:24px;gap:32px}.product-cover{max-width:300px}}
   </style>
 </head>
 <body id="top">
@@ -142,6 +150,20 @@
         <article class="offer-card reveal"><div class="card-top"><div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 6.5h.01M5.5 6.5h.01M7 13h5M7 16h8"/></svg></div></div><h3>Strona sprzedażowa</h3><p>Oferta, zawartość produktu i odpowiedzi na pytania klientów. Czytelny układ na telefonie i komputerze, dopasowany do Twojej marki.</p></article>
         <article class="offer-card reveal delay-1"><div class="card-top"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M5 7h14l1 14H4L5 7zM8 8V6a4 4 0 0 1 8 0v2M9 13l2 2 4-4"/></svg></div></div><h3>Sklep i płatności</h3><p>Produkt, koszyk i płatność w jednym miejscu. Twoi odbiorcy mogą wygodnie kupić kurs, e-book, plan lub konsultację.</p></article>
         <article class="offer-card reveal delay-2"><div class="card-top"><div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="m10 8 5 2.5-5 2.5zM8 21h8M12 17v4"/></svg></div></div><h3>Dostęp do materiałów</h3><p>Kurs wideo, plik do pobrania lub strefa klienta. Przygotowujemy sposób dostarczania treści oraz potrzebne integracje.</p></article>
+      </div>
+    </section>
+
+    <section class="digital-product wrap" id="poradnik" aria-labelledby="product-title">
+      <div class="product-shell reveal">
+        <div><img class="product-cover" src="assets/pierwsze-1000-okladka.png" alt="Okładka poradnika Pierwsze 1000 zł z małego profilu"></div>
+        <div class="product-copy">
+          <div class="eyebrow section-label">Produkt Veyro</div>
+          <h2 id="product-title">Pierwsze 1000 zł<br>z małego profilu.</h2>
+          <p>Praktyczny poradnik dla małych twórców: od znalezienia produktu i zbudowania oferty, przez prostą stronę sprzedażową, aż po pierwszy test sprzedaży.</p>
+          <div class="product-meta"><span>PDF</span><span>14 stron</span><span>Plan 7 dni</span><span>Gotowe szablony</span></div>
+          <div class="product-buy"><span class="product-price">19,99 zł</span><a class="pill pill-green" href="https://buy.stripe.com/test_14A5kE8ELdQM9q24eY2Ji00" target="_blank" rel="noopener noreferrer">Kup poradnik <svg class="arrow" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+          <p class="product-note">Płatność testowa Stripe Sandbox — na tym etapie nie są pobierane prawdziwe pieniądze.</p>
+        </div>
       </div>
     </section>
     <section class="journey" aria-labelledby="journey-title"><div class="wrap">
