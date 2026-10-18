@@ -1,0 +1,155 @@
+button,
+a,
+.panel,
+.stat-card,
+.event-tile,
+.kanban-card {
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+button:active {
+  transform: scale(0.98);
+}
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px #20201808;
+}
+.event-tile:hover,
+.kanban-card:hover {
+  transform: translateY(-2px);
+  background: #f1eee6;
+}
+.client-row:hover {
+  background: #f1efe8;
+}
+.progress-fill {
+  animation: grow 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+  transform-origin: left;
+}
+.progress {
+  transition: stroke-dashoffset 1s ease;
+}
+.chart-bar {
+  animation: bar-in 0.8s ease both;
+  transform-origin: bottom;
+}
+.chart-revenue polyline,
+.revenue-line path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 2.5s ease forwards;
+}
+#content {
+  animation: appear 0.35s ease;
+}
+dialog[open] {
+  animation: dialog-in 0.2s ease;
+}
+.toast {
+  animation: toast-in 0.3s ease;
+}
+.toast.leaving {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: 0.25s ease;
+}
+.task-row input:checked {
+  animation: check 0.2s ease;
+}
+.nav-item.active {
+  animation: nav-in 0.25s ease;
+}
+.calendar-event:hover {
+  background: #d4c5f0;
+  transform: translateY(-1px);
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes bar-in {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes check {
+  50% {
+    transform: scale(1.17);
+  }
+}
+@keyframes nav-in {
+  from {
+    background: #f3f2ee;
+  }
+  to {
+    background: #eae9e5;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .chart-revenue polyline,
+  .revenue-line path {
+    stroke-dashoffset: 0 !important;
+  }
+}
+body.reduce-motion *,
+body.reduce-motion *:before,
+body.reduce-motion *:after {
+  animation: none !important;
+  transition: none !important;
+}
+body.reduce-motion .chart-revenue polyline,
+body.reduce-motion .revenue-line path {
+  stroke-dashoffset: 0;
+}
