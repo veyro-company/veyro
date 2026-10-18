@@ -1,0 +1,26 @@
+name: Sprawdzenie VEYRO
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+defaults:
+  run:
+    working-directory: dashboard
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install --ignore-scripts --no-audit --no-fund
+      - run: npm test
+      - run: npm run test:db
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: veyro-interface
+          path: dashboard/dist/
+

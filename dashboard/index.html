@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f7f6f2" />
+    <meta
+      name="description"
+      content="VEYRO — Twoje miejsce do zarządzania relacjami, zadaniami i rozwojem firmy."
+    />
+    <title>VEYRO — Pulpit</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <a href="#content" class="skip-link">Przejdź do treści</a>
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="VEYRO — pulpit">VEYRO</a>
+      <nav id="navigation" aria-label="Nawigacja główna"></nav>
+      <button class="milestone" data-action="first-client">
+        <span class="sparkle">✦</span
+        ><strong>Pierwszy<br />klient coraz<br />bliżej.</strong
+        ><span class="circle-arrow">↗</span>
+      </button>
+      <div class="sidebar-bottom">
+        <button data-page="settings" class="settings-link"></button
+        ><span class="local-label"><i></i> Dane na tym urządzeniu</span>
+      </div>
+    </aside>
+    <div class="mobile-shade" data-action="close-menu"></div>
+    <main>
+      <header class="topbar">
+        <button
+          class="icon-button mobile-menu"
+          data-action="menu"
+          aria-label="Otwórz menu"
+        >
+          ☰
+        </button>
+        <div class="header-heading" id="header-heading"></div>
+        <div class="header-tools">
+          <time id="today"></time
+          ><button
+            class="icon-button"
+            data-action="search"
+            aria-label="Szukaj w aplikacji"
+            title="Szukaj (Ctrl+K)"
+          ></button
+          ><button
+            class="icon-button notification-button"
+            data-action="notifications"
+            aria-label="Przypomnienia"
+          ></button
+          ><button
+            class="team-avatars"
+            data-action="team"
+            aria-label="Zespół i profil"
+          >
+            <span>AK</span><span>MK</span></button
+          ><button class="button primary" data-action="add-menu">
+            <span>＋</span> Dodaj
+          </button>
+        </div>
+      </header>
+      <div id="content" tabindex="-1"></div>
+      <footer>
+        VEYRO <span>Małe kroki. Wielkie możliwości.</span
+        ><span id="save-state">Zapis lokalny</span>
+      </footer>
+    </main>
+    <dialog id="modal" aria-labelledby="modal-title">
+      <div id="modal-content"></div>
+    </dialog>
+    <div id="toasts" role="status" aria-live="polite"></div>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
